@@ -18,6 +18,7 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished1 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
@@ -26,6 +27,7 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished2 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
@@ -34,6 +36,7 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished3 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
@@ -42,6 +45,7 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished4 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
@@ -50,6 +54,7 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished5 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
@@ -58,6 +63,7 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished6 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
@@ -66,14 +72,39 @@ function levelAccomplished(){
     console.log('I am here')
     accomplished7 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;
   }
+
+  if(level === 8){
+    let numberOfGray = 0;
+    for(let i = 0; i < grid.length; i++){
+      for(let j = 1; j < grid[0].length; j++){
+        if(grid[i][j].color === 'gray'){
+          numberOfGray = 1;
+        }
+      }
+    }
+    if( numberOfGray === 0){
+      console.log('I am here')
+      accomplished8 = true;
+      accomplishPage();
+      clearInterval(interval0)
+      clearInterval(interval1);
+      clearInterval(interval2);
+      $score.innerText = 0;
+    }
+    else{numberOfGray = 0}
+  }
+
+
   if(level === 9 && Number($score.innerText) >= goal){
     console.log('I am here')
     accomplished9 = true;
     accomplishPage();
+    clearInterval(interval0)
     clearInterval(interval1);
     clearInterval(interval2);
     $score.innerText = 0;

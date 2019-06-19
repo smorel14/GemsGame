@@ -51,7 +51,7 @@ function infoPage() {
   if(level === 2){
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
-    ctx.fillText("Get 3000 points! You'll get 100 points",width/ 2, 350);
+    ctx.fillText("Get 2000 points! You'll get 100 points",width/ 2, 350);
     ctx.fillText("for every gray box you remove.",width/ 2, 390);
   }
   if(level === 3){
@@ -69,14 +69,14 @@ function infoPage() {
   if(level === 5){
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
-    ctx.fillText("Remove enough gray squares to get 4000",width/ 2, 350);
-    ctx.fillText("points. You only have 2 minutes",width/ 2, 390);
+    ctx.fillText("Remove enough gray squares to get 3000",width/ 2, 350);
+    ctx.fillText("points. You only have 3 minutes",width/ 2, 390);
   }
   if(level === 6){
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
-    ctx.fillText("Remove enough gray squares to get 4000",width/ 2, 350);
-    ctx.fillText("points. You only have 1.5 minutes",width/ 2, 390);
+    ctx.fillText("Remove enough gray squares to get 3000",width/ 2, 350);
+    ctx.fillText("points. You only have 2 minutes",width/ 2, 390);
     ctx.fillText("Show off your geaky skills!",width/ 2, 430);
   }
   if(level === 7){

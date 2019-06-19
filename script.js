@@ -12,6 +12,7 @@ let $retryButton = document.querySelector('.resetButton');
 let goal = 0;
 let level = 0;
 let accomplished = false;
+let interval0
 let interval1
 let interval2
 //$score.innerText
@@ -44,11 +45,20 @@ for (let i = 0; i < width / 100; i++) {
     swapSquare();
     drawGrid(grid);
 
+    if(level === 5 || level === 6){
+      stopWatch.startClick()
+       interval0 = setInterval(() => {
+          printTime()
+      }, 10)
+    }
+   
+
+
     interval1 = setInterval(() => {
-      console.log('internaval', interval1);
     replaceEmptyGrid(grid);
     drawGrid(grid);
     levelAccomplished()
+    failed()
     }, 500)
 
     interval2 = setInterval(() => {
@@ -59,26 +69,35 @@ for (let i = 0; i < width / 100; i++) {
 
 
 
-  function HomeRetry(){
-    console.log('comes here')
- 
+  function HomeRetry(){ 
   if ($retryButton.innerText === "HOME" || $retryButton.innerText === "NEXT"){
+    clearInterval(interval0);
+    stopWatch.stopClick();
+    stopWatch.resetClick()
+    $minDec.innerText = '0';
+    $minUni.innerText = '0';
+    $secDec.innerText = '0';
+    secUni.innerText  = '0';
     clearInterval(interval1);
     clearInterval(interval2);
     drawHomePage()
-    console.log('home')
     //$retryButton.onclick = () => {
    //  window.location.href = "/"
    // }
   }
   else if($retryButton.innerText === "Retry"){
    resetAll()
+   clearInterval(interval0);
+   stopWatch.stopClick();
+   stopWatch.resetClick()
+   $minDec.innerText = '0';
+   $minUni.innerText = '0';
+   $secDec.innerText = '0';
+   secUni.innerText  = '0';
    $score.innerText = 0;
-   console.log('retry')
   }
   else if($retryButton.innerText === "INFO"){
     level = 0;
-    console.log('infoPage')
     infoPage()
   }
   else if($retryButton.innerText === "START"){
@@ -117,24 +136,15 @@ function drawInstructionPage() {
 
 
 
-  function playGame(){
-
-
-    //$retryButton.onclick = resetAll;
-
- }
-
-
-
-
-
-
   function resetAll() {
     $retryButton.innerText = 'HOME'
-    console.log(1, $retryButton.innerText)
     gridColorX()
-    console.log(2, $retryButton.innerText)
     drawGrid(grid);
-    console.log(3, $retryButton.innerText)
+    if(level === 5 || level === 6){
+      stopWatch.startClick()
+       interval0 = setInterval(() => {
+          printTime()
+      }, 10)
+    }
   } 
 
