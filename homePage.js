@@ -6,38 +6,32 @@ function drawHomePage() {
   // Black Background
   ctx.fillStyle = "blue"
   ctx.fillRect(0,0,width,height)
+  ctx.restore()
+
  
 
    // Level 1 Background pink
   ctx.save()
-  ctx.fillStyle = '#dd4e4e'
+  if(accomplished1 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
   ctx.shadowColor = 'pink';
   ctx.shadowBlur = 30;
   ctx.shadowOffsetX = 10;
   ctx.fillRect(100,200,100,100);
   ctx.restore()
 
-  // Level 4 Background pink
-  ctx.save()
-  ctx.fillStyle = '#dd4e4e'
-  ctx.shadowColor = 'pink';
-  ctx.shadowBlur = 30;
-  ctx.shadowOffsetX = 10;
-  ctx.fillRect(100,400,100,100);
-  ctx.restore()
-
-  // Level 7 Background pink
-  ctx.save()
-  ctx.fillStyle = '#dd4e4e'
-  ctx.shadowColor = 'pink';
-  ctx.shadowBlur = 30;
-  ctx.shadowOffsetX = 10;
-  ctx.fillRect(100,600,100,100);
-  ctx.restore()
-
   // Level 2 Background pink
   ctx.save()
-  ctx.fillStyle = '#dd4e4e'
+  if(accomplished2 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
   ctx.shadowColor = 'pink';
   ctx.shadowBlur = 30;
   ctx.shadowOffsetX = 10;
@@ -46,48 +40,105 @@ function drawHomePage() {
 
   //Level 3 Background pink
   ctx.save()
-  ctx.fillStyle = '#dd4e4e'
+  if(accomplished3 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
   ctx.shadowColor = 'pink';
   ctx.shadowBlur = 30;
   ctx.shadowOffsetX = 10;
   ctx.fillRect(500,200,100,100);
   ctx.restore()
 
-  //Level 5 background pink
+  // Level 4 Background pink
   ctx.save()
-  ctx.fillStyle = '#dd4e4e'
+  if(accomplished4 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
   ctx.shadowColor = 'pink';
   ctx.shadowBlur = 30;
   ctx.shadowOffsetX = 10;
-  ctx.fillRect(300,400,100,100);
+  ctx.fillRect(100,400,100,100);
   ctx.restore()
+
+   //Level 5 background pink
+   ctx.save()
+   if(accomplished5 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
+   ctx.shadowColor = 'pink';
+   ctx.shadowBlur = 30;
+   ctx.shadowOffsetX = 10;
+   ctx.fillRect(300,400,100,100);
+   ctx.restore()
+
+     // Level 6 background pink
+  ctx.save()
+  if(accomplished6 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
+  ctx.shadowColor = 'pink';
+  ctx.shadowBlur = 30;
+  ctx.shadowOffsetX = 10;
+  ctx.fillRect(500,400,100,100);
+  ctx.restore()
+
+  // Level 7 Background pink
+  ctx.save()
+  if(accomplished7 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
+  ctx.shadowColor = 'pink';
+  ctx.shadowBlur = 30;
+  ctx.shadowOffsetX = 10;
+  ctx.fillRect(100,600,100,100);
+  ctx.restore()
+
+   // Level 8 background pink
+   ctx.save()
+   if(accomplished8 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
+   ctx.shadowColor = 'pink';
+   ctx.shadowBlur = 30;
+   ctx.shadowOffsetX = 10;
+   ctx.fillRect(300,600,100,100);
+   ctx.restore()
 
   //Level 9 background pink
   ctx.save()
-  ctx.fillStyle = '#dd4e4e'
+  if(accomplished9 === true){
+    ctx.fillStyle = '#87850e'
+  }
+  else{
+    ctx.fillStyle = '#dd4e4e'
+  }
   ctx.shadowColor = 'pink';
   ctx.shadowBlur = 30;
   ctx.shadowOffsetX = 10;
   ctx.fillRect(500,600,100,100);
   ctx.restore()
 
-  // Level 8 background pink
-  ctx.save()
-  ctx.fillStyle = '#dd4e4e'
-  ctx.shadowColor = 'pink';
-  ctx.shadowBlur = 30;
-  ctx.shadowOffsetX = 10;
-  ctx.fillRect(300,600,100,100);
-  ctx.restore()
 
-  // Level 6 background pink
-  ctx.save()
-  ctx.fillStyle = '#dd4e4e'
-  ctx.shadowColor = 'pink';
-  ctx.shadowBlur = 30;
-  ctx.shadowOffsetX = 10;
-  ctx.fillRect(500,400,100,100);
-  ctx.restore()
+
+
 
 
 
@@ -123,63 +174,64 @@ function drawHomePage() {
       possitionY >= 2 && possitionY < 3){
       document.body.requestFullscreen()
         level = 1;
-        gameSetup(grid);
+        infoPage()
+        ;
         return;
       }
       if(possitionX >= 3 && possitionX < 4 &&
         possitionY >= 2 && possitionY < 3){
         document.body.requestFullscreen()
           level = 2;
-          gameSetup(grid);
+          infoPage()
           return;
         }
         if(possitionX >= 5 && possitionX < 6 &&
           possitionY >= 2 && possitionY < 3){
           document.body.requestFullscreen()
             level = 3;
-            gameSetup(grid);
+            infoPage()
             return;
           }
           if(possitionX >= 1 && possitionX < 2 &&
             possitionY >= 4 && possitionY < 5){
             document.body.requestFullscreen()
               level = 4;
-              gameSetup(grid);
+              infoPage()
               return;
             }
             if(possitionX >= 3 && possitionX < 4 &&
               possitionY >= 4 && possitionY < 5){
               document.body.requestFullscreen()
                 level = 5;
-                gameSetup(grid);
+                infoPage()
                 return;
               }
               if(possitionX >= 5 && possitionX < 6 &&
                 possitionY >= 4 && possitionY < 5){
                 document.body.requestFullscreen()
                   level = 6;
-                  gameSetup(grid);
+                  infoPage()
                   return;
                 }
                 if(possitionX >= 1 && possitionX < 2 &&
                   possitionY >= 6 && possitionY < 7){
                   document.body.requestFullscreen()
                     level = 7;
-                    gameSetup(grid);
+                    infoPage()
                     return;
                   }
                   if(possitionX >= 3 && possitionX < 4 &&
                     possitionY >= 6 && possitionY < 7){
                     document.body.requestFullscreen()
                       level = 8;
-                      gameSetup(grid);
+                      infoPage()
                       return;
                     }
                     if(possitionX >= 5 && possitionX < 6 &&
                       possitionY >= 6 && possitionY < 7){
                       document.body.requestFullscreen()
                         level = 9;
-                        gameSetup(grid);
+                        infoPage()
                         return;
                       }
 

@@ -11,6 +11,11 @@ let grid = [];
 let $retryButton = document.querySelector('.resetButton');
 let goal = 0;
 let level = 0;
+let accomplished = false;
+let interval1
+let interval2
+//$score.innerText
+
 
 
 for (let i = 0; i < width / 100; i++) {
@@ -21,18 +26,69 @@ for (let i = 0; i < width / 100; i++) {
 }
 
 
-
 // First of all we draw the Home Page
   drawHomePage()
+  //When we click on Info/Home/Next/Retry.
+  $retryButton.onclick = HomeRetry;
+  //Checks ever 0.5 seconds if the level has been accomplished
+  //setInterval(() => {
+  //}, 500)
 
 
-
-//If level 1 is sellected go to level 1;
+  //If a level is selected it goes to that level.
   function gameSetup(grid){
     drawGrid(grid);
     gridColorX()
-    playGame()
+    $retryButton.innerText = 'HOME'
+    removeColor(grid);
+    swapSquare();
+    drawGrid(grid);
+
+    interval1 = setInterval(() => {
+      console.log('internaval', interval1);
+    replaceEmptyGrid(grid);
+    drawGrid(grid);
+    levelAccomplished()
+    }, 500)
+
+    interval2 = setInterval(() => {
+    removeColor(grid);
+    drawGrid(grid);
+    },650)
   }
+
+
+
+  function HomeRetry(){
+    console.log('comes here')
+ 
+  if ($retryButton.innerText === "HOME" || $retryButton.innerText === "NEXT"){
+    clearInterval(interval1);
+    clearInterval(interval2);
+    drawHomePage()
+    console.log('home')
+    //$retryButton.onclick = () => {
+   //  window.location.href = "/"
+   // }
+  }
+  else if($retryButton.innerText === "Retry"){
+   resetAll()
+   $score.innerText = 0;
+   console.log('retry')
+  }
+  else if($retryButton.innerText === "INFO"){
+    level = 0;
+    console.log('infoPage')
+    infoPage()
+  }
+  else if($retryButton.innerText === "START"){
+   gameSetup(grid);
+  }
+ 
+ }
+
+
+
 
 
 
@@ -62,38 +118,14 @@ function drawInstructionPage() {
 
 
   function playGame(){
-    $retryButton.innerText = 'HOME'
-    removeColor(grid);
-    swapSquare();
-    drawGrid(grid);
-    setInterval(() => {
-    replaceEmptyGrid(grid);
-    drawGrid(grid);
-    }, 500)
 
-    setInterval(() => {
-    removeColor(grid);
-    drawGrid(grid);
-    },650)
 
     //$retryButton.onclick = resetAll;
 
-    $retryButton.onclick = HomeRetry;
-
-    function HomeRetry(){
-    if ($retryButton.innerText === "HOME"){
-      //drawHomePage()
-      console.log('home')
-     // $retryButton.onclick = () => {
-      window.location.href = "/"
-     // }
-    }
-    else if($retryButton.innerText === "Retry"){
-     resetAll()
-     console.log('retry')
-    }
-  }
  }
+
+
+
 
 
 

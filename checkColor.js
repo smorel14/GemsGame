@@ -60,7 +60,7 @@ for(let j = 0; j < grid[0].length - 2; j++){
 // points is the points given for every gray square you get rid of.
 for(let i = 0; i < whiteArray.length; i++){
   if(whiteArray[i].color === 'gray'){
-    $score.innerHTML = Number($score.innerHTML) + Number(points)
+    $score.innerText = Number($score.innerText) + Number(points)
     console.log($score.innerHTML)
   }
   whiteArray[i].color = 'white';
@@ -79,7 +79,7 @@ for(let i = 0; i < whiteArray.length; i++){
 
 function replaceEmptyGrid(grid){
 
-if(level != 2 && level !=3){
+if(level!=2 && level!=5 && level!=6 && level !=8){
   console.log('position1')
   for (let j = 0; j < grid[0].length; j++) {
     for (let i = 0; i < grid.length; i++) {
@@ -90,7 +90,7 @@ if(level != 2 && level !=3){
           grid[i][0].color = colorAray[Math.floor(Math.random() * 5)];
       }
       else if(grid[i][j].color === 'white' && j === 0){
-        grid[i][j].color = colorAray[Math.floor(Math.random() * 5)];
+        grid[i][0].color = colorAray[Math.floor(Math.random() * 5)];
       }
     }
   }
@@ -108,7 +108,7 @@ else{
           grid[i][0].color = colorArayAndGray[Math.floor(Math.random() * 6)];
       }
       else if(grid[i][j].color === 'white' && j === 0){
-        grid[i][j].color = colorArayAndGray[Math.floor(Math.random() * 6)];
+        grid[i][0].color = colorArayAndGray[Math.floor(Math.random() * 6)];
       }
     }
   }
