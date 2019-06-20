@@ -1,135 +1,41 @@
- 
-    <!DOCTYPE html>
-    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Lazy Line Painter</title>
-      <meta name="description" content="A modern JS library for SVG path animation">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gem's Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-      <!-- css  -->
-      <style>
+    
+    <div class="container">
+      <div class ="top">
+          <h2>Match The Box</h2>
+          <div class="time">
+              <span id="minDec" class="number">0</span><span id="minUni" class="number">0</span><span>:</span><span id="secDec" class="number">0</span><span id="secUni" class="number">0</span>
+          </div>
+      </div>
+      <canvas width="700" height="900"></canvas>
+      <div class="buttons">
+        <div class="scoreTarget"><div class="score">0</div><div> / </div><div class = "target"> 0 </div></div>
+        <button class="resetButton">Retry</button>
+      </div>
+    </div>
 
-        body, html {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top:0;
-          left:0;
-          margin: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-          #squaressvgrepo-com {
-            width: 70vw;
-            height: 70vh;
-            position: relative;
-            overflow: visible;
-          }
-
-          p{
-            position: fixed;
-            right: auto;
-            margin: 0 50vh 0 0;
-            padding: 0;
-            color: #3398db;
-            font-size: 5vh;
-          }
-      </style>
-   
-      <!-- Include lazylinepainter -->
-      <script src="intro.js"></script>
-
-      <script type="text/javascript">
-
-        (function(){ 
-
-          document.onreadystatechange = () => {
-
-            if (document.readyState === 'complete') {
-                      
-              /**
-               * Setup your Lazy Line element.
-               * see README file for more settings
-               */
-
-              let el = document.querySelector('#squaressvgrepo-com');
-              let myAnimation = new LazyLinePainter(el, {"ease":"easeLinear","strokeWidth":3.9,"strokeOpacity":1,"strokeColor":"#3398DB","strokeCap":"round","delay":290}); 
-              myAnimation.paint(); 
-            }
-          }
-
-        })();
-
-      </script>
-    </head>
-
-    <body>
-
-      
-      <p> GEM.MACHING</p>
-
-        
-
-
-      <svg version="1.1" id="squaressvgrepo-com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197.227 197.227" style="enable-background:new 0 0 197.227 197.227;" xml:space="preserve" data-llp-composed="true" class="lazy-line-painter">
-<g>
-<g>
-  <path style="fill: rgb(1, 0, 2); stroke-linejoin: miter; stroke-linecap: round;" d="M0,82.034h77.056V4.967H0V82.034z M68.728,13.299V73.71h-60.4V13.299H68.728z" data-llp-id="squaressvgrepo-com-0" data-llp-duration="870" data-llp-delay="0" fill-opacity="0" data-llp-stroke-join="miter-clip" data-llp-stroke-cap="round"/>
-  <path style="fill: rgb(1, 0, 2); stroke-linejoin: miter; stroke-linecap: round;" d="M120.178,4.967v77.063h77.049V4.967H120.178z M128.502,73.71V13.299h60.404V73.71H128.502z" data-llp-id="squaressvgrepo-com-1" data-llp-duration="870" data-llp-delay="870" fill-opacity="0" data-llp-stroke-join="miter-clip" data-llp-stroke-cap="round"/>
-  <path style="fill: rgb(1, 0, 2); stroke-linejoin: miter; stroke-linecap: round;" d="M0,192.259h77.056V115.2H0V192.259z M68.728,123.52v60.411h-60.4V123.52H68.728z" data-llp-id="squaressvgrepo-com-2" data-llp-duration="870" data-llp-delay="1740" fill-opacity="0" data-llp-stroke-join="miter-clip" data-llp-stroke-cap="round"/>
-  <path style="fill: rgb(1, 0, 2); stroke-linejoin: miter; stroke-linecap: round;" d="M120.178,192.259h77.049V115.2h-77.049V192.259z M188.906,123.52v60.411h-60.404V123.52H188.906z" data-llp-id="squaressvgrepo-com-3" data-llp-duration="870" data-llp-delay="2610" fill-opacity="0" data-llp-stroke-join="miter-clip" data-llp-stroke-cap="round"/>
-</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-
-<script>
-  let buttonClicking = new Audio ()
-  buttonClicking.src ="buttonClicking.mp3"
-  document.body.requestFullscreen()
-
-    document.onclick = click => {
-      buttonClicking.play();
-      setTimeout(() => {
-      window.location.href = 'starterPage.html'
-      }, 500)
-    }
-  </script>
-
-    </body>
-  </html>
+    <script src="homePage.js"></script>
+    <script src="InfoPage.js"></script>
+    <script src="explosion.js"></script>
+    <script src="StopWatch.js"></script>
+    <script src="failed.js"></script>
+    <script src="stopWatchCode.js"></script>
+    <script src="girdColor.js"></script>
+    <script src="Square.js"></script>
+    <script src="swapSquare.js"></script>
+    <script src="drawGrid.js"></script>
+    <script src="checkColor.js"></script>
+    <script src="LevelAccomplished.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
