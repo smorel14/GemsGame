@@ -125,7 +125,7 @@ document.body.requestFullscreen()
 document.onclick = click => {
   buttonClicking.play();
   setTimeout(() => {
-  window.location.href = 'index.html'
+  window.location.href = 'intro.html'
   }, 300)
 }
 </script>
@@ -139,45 +139,3 @@ document.onclick = click => {
 
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Gem's Game</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-
-    
-    <div class="container">
-      <div class ="top">
-          <h2>Match The Box</h2>
-          <div class="time">
-              <span id="minDec" class="number">0</span><span id="minUni" class="number">0</span><span>:</span><span id="secDec" class="number">0</span><span id="secUni" class="number">0</span>
-          </div>
-      </div>
-      <canvas width="700" height="900"></canvas>
-      <div class="buttons">
-        <div class="scoreTarget"><div class="score">0</div><div> / </div><div class = "target"> 0 </div></div>
-        <button class="resetButton">Retry</button>
-      </div>
-    </div>
-
-    <script src="homePage.js"></script>
-    <script src="InfoPage.js"></script>
-    <script src="explosion.js"></script>
-    <script src="StopWatch.js"></script>
-    <script src="failed.js"></script>
-    <script src="stopWatchCode.js"></script>
-    <script src="girdColor.js"></script>
-    <script src="Square.js"></script>
-    <script src="swapSquare.js"></script>
-    <script src="drawGrid.js"></script>
-    <script src="checkColor.js"></script>
-    <script src="LevelAccomplished.js"></script>
-    <script src="script.js"></script>
-  </body>
-</html>
