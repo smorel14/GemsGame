@@ -5,128 +5,128 @@ function gridColorX(){
 
   if(level === 1){
     gridColor();
-    grid[0][5].color = 'gray';
-    grid[1][6].color = 'gray';
-    grid[2][5].color = 'gray';
-    grid[4][3].color = 'gray';
-    grid[5][3].color = 'gray';
-    grid[6][4].color = 'gray';
+    grid[0][5].color = 'grey';
+    grid[1][6].color = 'grey';
+    grid[2][5].color = 'grey';
+    grid[4][3].color = 'grey';
+    grid[5][3].color = 'grey';
+    grid[6][4].color = 'grey';
   }
 
   if(level === 2){
     gridColor();
-    grid[0][0].color = 'gray';
-    grid[1][1].color = 'gray';
-    grid[2][1].color = 'gray';
-    grid[4][1].color = 'gray';
-    grid[5][3].color = 'gray';
-    grid[6][4].color = 'gray';
-    grid[0][0].color = 'gray';
-    grid[2][5].color = 'gray';
-    grid[4][5].color = 'gray';
-    grid[5][2].color = 'gray';
-    grid[6][6].color = 'gray';
+    grid[0][0].color = 'grey';
+    grid[1][1].color = 'grey';
+    grid[2][1].color = 'grey';
+    grid[4][1].color = 'grey';
+    grid[5][3].color = 'grey';
+    grid[6][4].color = 'grey';
+    grid[0][0].color = 'grey';
+    grid[2][5].color = 'grey';
+    grid[4][5].color = 'grey';
+    grid[5][2].color = 'grey';
+    grid[6][6].color = 'grey';
   }
 
   if(level === 3){
     gridColor();
-    grid[0][0].color = 'gray';
-    grid[1][1].color = 'gray';
-    grid[2][1].color = 'gray';
-    grid[4][1].color = 'gray';
-    grid[5][3].color = 'gray';
-    grid[6][4].color = 'gray';
-    grid[0][0].color = 'gray';
-    grid[2][5].color = 'gray';
-    grid[4][5].color = 'gray';
-    grid[6][0].color = 'gray';
-    grid[3][8].color = 'gray';
-    grid[0][3].color = 'gray';
-    grid[1][0].color = 'gray';
-    grid[0][6].color = 'gray';
-    grid[2][3].color = 'gray';
-    grid[6][4].color = 'gray';
-    grid[6][7].color = 'gray';
-    grid[5][7].color = 'gray';
+    grid[0][0].color = 'grey';
+    grid[1][1].color = 'grey';
+    grid[2][1].color = 'grey';
+    grid[4][1].color = 'grey';
+    grid[5][3].color = 'grey';
+    grid[6][4].color = 'grey';
+    grid[0][0].color = 'grey';
+    grid[2][5].color = 'grey';
+    grid[4][5].color = 'grey';
+    grid[6][0].color = 'grey';
+    grid[3][8].color = 'grey';
+    grid[0][3].color = 'grey';
+    grid[1][0].color = 'grey';
+    grid[0][6].color = 'grey';
+    grid[2][3].color = 'grey';
+    grid[6][4].color = 'grey';
+    grid[6][7].color = 'grey';
+    grid[5][7].color = 'grey';
   }
 
   if(level === 4){
   gridColor();
-  grid[1][0].color = 'gray';
-  grid[4][4].color = 'gray';
-  grid[6][3].color = 'gray';
-  //grid[2][4].color = 'gray';
-  grid[2][1].color = 'gray';
+  grid[1][0].color = 'grey';
+  grid[4][4].color = 'grey';
+  grid[6][3].color = 'grey';
+  //grid[2][4].color = 'grey';
+  grid[2][1].color = 'grey';
   }
 
   if(level === 5){
   gridColor();
-  grid[1][0].color = 'gray';
-  grid[4][4].color = 'gray';
-  grid[5][6].color = 'gray';
-  grid[6][3].color = 'gray';
-  grid[3][3].color = 'gray';
-  grid[2][4].color = 'gray';
-  grid[2][1].color = 'gray';
-  grid[2][3].color = 'gray';
-  grid[6][4].color = 'gray';
-  grid[6][7].color = 'gray';
-  grid[5][7].color = 'gray';
+  grid[1][0].color = 'grey';
+  grid[4][4].color = 'grey';
+  grid[5][6].color = 'grey';
+  grid[6][3].color = 'grey';
+  grid[3][3].color = 'grey';
+  grid[2][4].color = 'grey';
+  grid[2][1].color = 'grey';
+  grid[2][3].color = 'grey';
+  grid[6][4].color = 'grey';
+  grid[6][7].color = 'grey';
+  grid[5][7].color = 'grey';
   }
 
   if(level === 6){
   gridColor();
-  grid[1][0].color = 'gray';
-  grid[4][4].color = 'gray';
-  grid[5][6].color = 'gray';
-  grid[2][0].color = 'gray';
-  grid[6][0].color = 'gray';
-  grid[3][8].color = 'gray';
-  grid[0][3].color = 'gray';
-  grid[1][0].color = 'gray';
-  grid[0][6].color = 'gray';
-  grid[2][3].color = 'gray';
-  grid[6][4].color = 'gray';
-  grid[6][7].color = 'gray';
-  grid[5][7].color = 'gray';
+  grid[1][0].color = 'grey';
+  grid[4][4].color = 'grey';
+  grid[5][6].color = 'grey';
+  grid[2][0].color = 'grey';
+  grid[6][0].color = 'grey';
+  grid[3][8].color = 'grey';
+  grid[0][3].color = 'grey';
+  grid[1][0].color = 'grey';
+  grid[0][6].color = 'grey';
+  grid[2][3].color = 'grey';
+  grid[6][4].color = 'grey';
+  grid[6][7].color = 'grey';
+  grid[5][7].color = 'grey';
   }
 
   if(level === 7){
     gridColor();
-    grid[1][0].color = 'gray';
-    grid[4][4].color = 'gray';
-    grid[5][6].color = 'gray';
+    grid[1][0].color = 'grey';
+    grid[4][4].color = 'grey';
+    grid[5][6].color = 'grey';
   }
 
   if(level === 8){
     gridColor();
-    grid[0][0].color = 'gray';
-    grid[1][1].color = 'gray';
-    grid[2][1].color = 'gray';
-    grid[4][1].color = 'gray';
-    grid[5][3].color = 'gray';
-    grid[6][4].color = 'gray';
-    grid[0][0].color = 'gray';
-    grid[2][5].color = 'gray';
-    grid[4][5].color = 'gray';
-    grid[6][0].color = 'gray';
-    grid[3][8].color = 'gray';
-    grid[0][3].color = 'gray';
-    grid[1][0].color = 'gray';
-    grid[0][6].color = 'gray';
-    grid[2][3].color = 'gray';
-    grid[6][4].color = 'gray';
-    grid[6][7].color = 'gray';
-    grid[5][7].color = 'gray';
+    grid[0][0].color = 'grey';
+    grid[1][1].color = 'grey';
+    grid[2][1].color = 'grey';
+    grid[4][1].color = 'grey';
+    grid[5][3].color = 'grey';
+    grid[6][4].color = 'grey';
+    grid[0][0].color = 'grey';
+    grid[2][5].color = 'grey';
+    grid[4][5].color = 'grey';
+    grid[6][0].color = 'grey';
+    grid[3][8].color = 'grey';
+    grid[0][3].color = 'grey';
+    grid[1][0].color = 'grey';
+    grid[0][6].color = 'grey';
+    grid[2][3].color = 'grey';
+    grid[6][4].color = 'grey';
+    grid[6][7].color = 'grey';
+    grid[5][7].color = 'grey';
   }
 
   if(level === 9){
     gridColor();
-    grid[1][0].color = 'gray';
-    grid[3][4].color = 'gray';
-    grid[5][6].color = 'gray';
-    grid[6][0].color = 'gray';
-    grid[6][3].color = 'gray';
+    grid[1][0].color = 'grey';
+    grid[3][4].color = 'grey';
+    grid[5][6].color = 'grey';
+    grid[6][0].color = 'grey';
+    grid[6][3].color = 'grey';
   }
 }
 
@@ -205,11 +205,11 @@ grid[6][7].color = 'yellow';
 grid[6][8].color = 'blue';
 
 /*
-grid[1][0].color = 'gray';
-grid[4][4].color = 'gray';
-grid[5][6].color = 'gray';
-grid[2][0].color = 'gray';
-grid[3][1].color = 'gray';
+grid[1][0].color = 'grey';
+grid[4][4].color = 'grey';
+grid[5][6].color = 'grey';
+grid[2][0].color = 'grey';
+grid[3][1].color = 'grey';
 */
 
 }
