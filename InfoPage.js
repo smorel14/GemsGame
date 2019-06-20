@@ -41,6 +41,7 @@ function infoPage() {
 
   }
   if(level === 1){
+    goal = 600;
     ctx.fillText("GOAL",width/ 2, 300);
     $retryButton.innerText = 'START'
     ctx.fillText("Get 600 points by removing all the gray",width/ 2, 350);
@@ -49,30 +50,35 @@ function infoPage() {
 
   }
   if(level === 2){
+    goal = 2000;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Get 2000 points! You'll get 100 points",width/ 2, 350);
     ctx.fillText("for every gray box you remove.",width/ 2, 390);
   }
   if(level === 3){
+    goal = 1300;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Get 1300 points. Be careful, there won't",width/ 2, 350);
     ctx.fillText("be any new squares coming in this time.",width/ 2, 390);
   }
   if(level === 4){
+    goal = 300;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Get 300 points by removeing 3 gray squares!",width/ 2, 350);
     ctx.fillText("There are only 4 gray squares avalible.",width/ 2, 390);
   }
   if(level === 5){
+    goal = 3000;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Remove enough gray squares to get 3000",width/ 2, 350);
     ctx.fillText("points. You only have 3 minutes",width/ 2, 390);
   }
   if(level === 6){
+    goal = 3000;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Remove enough gray squares to get 3000",width/ 2, 350);
@@ -80,20 +86,23 @@ function infoPage() {
     ctx.fillText("Show off your geaky skills!",width/ 2, 430);
   }
   if(level === 7){
+    goal = 300;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Get 300 points by removeing 3 gray squares!",width/ 2, 350);
     ctx.fillText("There are only 3 gray squares avalible.",width/ 2, 390);
   }
   if(level === 8){
+    goal = 'n/a'
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("Remove all the gray squares! You'll",width/ 2, 350);
     ctx.fillText("only win when there are no more gray",width/ 2, 390);
-    ctx.fillText("boxex other than on the top line.",width/ 2, 430);
+    ctx.fillText("boxes other than on the top line.",width/ 2, 430);
     ctx.fillText("Try not to go crazy!",width/ 2, 470);
   }
   if(level === 9){
+    goal = 500;
     $retryButton.innerText = 'START'
     ctx.fillText("GOAL",width/ 2, 300);
     ctx.fillText("GOAL",width/ 2, 300);
@@ -104,8 +113,8 @@ function infoPage() {
 
 
 
-
-
+  // types the goal onto the button at the bottom.
+  $target.innerText = goal;
   ctx.restore()
 
 }

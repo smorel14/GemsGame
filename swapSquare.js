@@ -18,7 +18,9 @@ function swapSquare() {
     if(possitionX < 0 || possitionY < 0 || possitionX > 6 || possitionY > 8){
       return
     }
-    console.log(possitionX, possitionY)
+    buttonClicking.pause();
+    buttonClicking.currentTime = 0
+    buttonClicking.play();
     let grid1 = grid[possitionX][possitionY]
     grid1.isSelected = true;
 
@@ -94,5 +96,10 @@ let color3 = ''
   color1 = grid1.color;
   grid1.color = grid2.color;
   grid2.color = color1; 
+  // sound for switch back;
+  
+  bananaSlip.pause();
+  bananaSlip.currentTime = -1
+  bananaSlip.play();
   },200)
 }

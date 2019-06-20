@@ -1,9 +1,9 @@
 
 
+
 function gridColorX(){
 
   if(level === 1){
-    goal = 600;
     gridColor();
     grid[0][5].color = 'gray';
     grid[1][6].color = 'gray';
@@ -14,7 +14,6 @@ function gridColorX(){
   }
 
   if(level === 2){
-    goal = 2000;
     gridColor();
     grid[0][0].color = 'gray';
     grid[1][1].color = 'gray';
@@ -30,7 +29,6 @@ function gridColorX(){
   }
 
   if(level === 3){
-    goal = 1300;
     gridColor();
     grid[0][0].color = 'gray';
     grid[1][1].color = 'gray';
@@ -53,7 +51,6 @@ function gridColorX(){
   }
 
   if(level === 4){
-    goal = 300;
   gridColor();
   grid[1][0].color = 'gray';
   grid[4][4].color = 'gray';
@@ -63,7 +60,6 @@ function gridColorX(){
   }
 
   if(level === 5){
-    goal = 3000;
   gridColor();
   grid[1][0].color = 'gray';
   grid[4][4].color = 'gray';
@@ -79,7 +75,6 @@ function gridColorX(){
   }
 
   if(level === 6){
-    goal = 3000;
   gridColor();
   grid[1][0].color = 'gray';
   grid[4][4].color = 'gray';
@@ -97,7 +92,6 @@ function gridColorX(){
   }
 
   if(level === 7){
-    goal = 300;
     gridColor();
     grid[1][0].color = 'gray';
     grid[4][4].color = 'gray';
@@ -105,7 +99,6 @@ function gridColorX(){
   }
 
   if(level === 8){
-    goal = 400;
     gridColor();
     grid[0][0].color = 'gray';
     grid[1][1].color = 'gray';
@@ -128,7 +121,6 @@ function gridColorX(){
   }
 
   if(level === 9){
-    goal = 500;
     gridColor();
     grid[1][0].color = 'gray';
     grid[3][4].color = 'gray';

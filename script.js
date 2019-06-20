@@ -9,6 +9,7 @@ let nbOfRows = height / 100
 let nbOfCols = width / 100
 let grid = [];
 let $retryButton = document.querySelector('.resetButton');
+let $target = document.querySelector('.target');
 let goal = 0;
 let level = 0;
 let accomplished = false;
@@ -16,6 +17,46 @@ let interval0
 let interval1
 let interval2
 //$score.innerText
+
+
+let backgroundMusic = new Audio ()
+backgroundMusic.src = "septahelix.mp3"
+//backgroundMusic.src = "airtone.mp3"
+backgroundMusic.loop = true;
+let buttonClicking = new Audio ()
+buttonClicking.src ="buttonClicking.mp3"
+let decapitation = new Audio()
+decapitation.src = "Decapitation.wav"
+let bananaSlip = new Audio()
+bananaSlip.src = "Banana.wav"
+
+/*
+var x = document.getElementById(".septahelixSound"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  septahelix.pause(); 
+} 
+*/
+
+
+//sound when removeing squares
+function playDecapitation(){
+  decapitation.pause();
+  decapitation.currentTime = 0
+  decapitation.play();
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -38,6 +79,8 @@ for (let i = 0; i < width / 100; i++) {
 
   //If a level is selected it goes to that level.
   function gameSetup(grid){
+   // backgroundMusic.currentTime = 5;
+    backgroundMusic.play()
     drawGrid(grid);
     gridColorX()
     $retryButton.innerText = 'HOME'
@@ -71,6 +114,9 @@ for (let i = 0; i < width / 100; i++) {
 
   function HomeRetry(){ 
   if ($retryButton.innerText === "HOME" || $retryButton.innerText === "NEXT"){
+    buttonClicking.pause();
+    buttonClicking.currentTime = 0
+    buttonClicking.play();
     clearInterval(interval0);
     stopWatch.stopClick();
     stopWatch.resetClick()
@@ -86,7 +132,10 @@ for (let i = 0; i < width / 100; i++) {
    // }
   }
   else if($retryButton.innerText === "Retry"){
-   resetAll()
+    buttonClicking.pause();
+    buttonClicking.currentTime = 0
+    buttonClicking.play();
+    resetAll()
    clearInterval(interval0);
    stopWatch.stopClick();
    stopWatch.resetClick()
@@ -97,11 +146,17 @@ for (let i = 0; i < width / 100; i++) {
    $score.innerText = 0;
   }
   else if($retryButton.innerText === "INFO"){
+    buttonClicking.pause();
+    buttonClicking.currentTime = 0
+    buttonClicking.play();
     level = 0;
     infoPage()
   }
   else if($retryButton.innerText === "START"){
-   gameSetup(grid);
+    buttonClicking.pause();
+    buttonClicking.currentTime = 0
+    buttonClicking.play();
+    gameSetup(grid);
   }
  
  }

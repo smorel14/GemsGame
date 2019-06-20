@@ -35,6 +35,8 @@ function removeColor(grid) {
   //CHECKS AND CHANGES COLUMNS
 for(let j = 0; j < grid[0].length - 2; j++){
   for (let i = 0; i < grid.length; i++){
+    let posx = i;
+    let posy = j;
     let color1 = grid[i][j].color;
     let color2 = grid[i][j+1].color;
     //console.log(grid[i][j+2].color)
@@ -63,7 +65,10 @@ for(let i = 0; i < whiteArray.length; i++){
     $score.innerText = Number($score.innerText) + Number(points)
     console.log($score.innerHTML)
   }
+  playDecapitation()
   whiteArray[i].color = 'white';
+  console.log('i&j', whiteArray[i].x, whiteArray[i].y)
+  explosion(whiteArray[i].x,whiteArray[i].y)
 }
 }
 

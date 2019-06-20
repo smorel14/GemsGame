@@ -1,5 +1,8 @@
 
 function drawHomePage() {
+  //Turn off the music everytime we get here.
+  backgroundMusic.pause();
+  backgroundMusic.currentTime = 0;
   //Changes the button to start
   $retryButton.innerText = 'INFO'
   ctx.save()
@@ -174,6 +177,7 @@ function drawHomePage() {
       possitionY >= 2 && possitionY < 3){
       document.body.requestFullscreen()
         level = 1;
+        Clicking()
         infoPage()
         ;
         return;
@@ -182,6 +186,7 @@ function drawHomePage() {
         possitionY >= 2 && possitionY < 3){
         document.body.requestFullscreen()
           level = 2;
+          Clicking()
           infoPage()
           return;
         }
@@ -189,6 +194,7 @@ function drawHomePage() {
           possitionY >= 2 && possitionY < 3){
           document.body.requestFullscreen()
             level = 3;
+            Clicking()
             infoPage()
             return;
           }
@@ -196,6 +202,7 @@ function drawHomePage() {
             possitionY >= 4 && possitionY < 5){
             document.body.requestFullscreen()
               level = 4;
+              Clicking()
               infoPage()
               return;
             }
@@ -203,6 +210,7 @@ function drawHomePage() {
               possitionY >= 4 && possitionY < 5){
               document.body.requestFullscreen()
                 level = 5;
+                Clicking()
                 infoPage()
                 return;
               }
@@ -210,6 +218,7 @@ function drawHomePage() {
                 possitionY >= 4 && possitionY < 5){
                 document.body.requestFullscreen()
                   level = 6;
+                  Clicking()
                   infoPage()
                   return;
                 }
@@ -217,6 +226,7 @@ function drawHomePage() {
                   possitionY >= 6 && possitionY < 7){
                   document.body.requestFullscreen()
                     level = 7;
+                    Clicking()
                     infoPage()
                     return;
                   }
@@ -224,6 +234,7 @@ function drawHomePage() {
                     possitionY >= 6 && possitionY < 7){
                     document.body.requestFullscreen()
                       level = 8;
+                      Clicking()
                       infoPage()
                       return;
                     }
@@ -231,11 +242,17 @@ function drawHomePage() {
                       possitionY >= 6 && possitionY < 7){
                       document.body.requestFullscreen()
                         level = 9;
+                        Clicking()
                         infoPage()
                         return;
                       }
 
       else{ return}
-
   }
+}
+
+function Clicking (){
+  buttonClicking.pause();
+  buttonClicking.currentTime = 0
+  buttonClicking.play();
 }
