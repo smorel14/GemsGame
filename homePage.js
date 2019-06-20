@@ -7,7 +7,7 @@ function drawHomePage() {
   $retryButton.innerText = 'INFO'
   ctx.save()
   // Black Background
-  ctx.fillStyle = "blue"
+  ctx.fillStyle = "#3398db"
   ctx.fillRect(0,0,width,height)
   ctx.restore()
 

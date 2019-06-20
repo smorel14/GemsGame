@@ -2,6 +2,9 @@ body {
   /* We give a margin 0 so that the page doesnt scroll, by default it comes with it */
   margin: 0;
 }
+h2{
+  color: #3398db;
+}
 .container {
   background-color: white;
   display: flex;

@@ -2,7 +2,7 @@
 function infoPage() {
   ctx.save()
   // Blue Background
-  ctx.fillStyle = "blue"
+  ctx.fillStyle = "#3398db"
   ctx.fillRect(0,0,width,height)
   ctx.fillStyle = "white"
   ctx.font = "50px Arial"

@@ -20,8 +20,8 @@ let interval2
 
 
 let backgroundMusic = new Audio ()
-backgroundMusic.src = "septahelix.mp3"
-//backgroundMusic.src = "airtone.mp3"
+//backgroundMusic.src = "septahelix.mp3"
+backgroundMusic.src = "airtone.mp3"
 backgroundMusic.loop = true;
 let buttonClicking = new Audio ()
 buttonClicking.src ="buttonClicking.mp3"
@@ -53,13 +53,6 @@ function playDecapitation(){
 
 
 
-
-
-
-
-
-
-
 for (let i = 0; i < width / 100; i++) {
   grid.push([]);
   for (let j = 0; j < height / 100; j++) {
@@ -79,7 +72,7 @@ for (let i = 0; i < width / 100; i++) {
 
   //If a level is selected it goes to that level.
   function gameSetup(grid){
-   // backgroundMusic.currentTime = 5;
+    backgroundMusic.currentTime = 5;
     backgroundMusic.play()
     drawGrid(grid);
     gridColorX()
