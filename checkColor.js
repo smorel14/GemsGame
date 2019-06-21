@@ -61,7 +61,7 @@ for(let j = 0; j < grid[0].length - 2; j++){
 
 // points is the points given for every gray square you get rid of.
 for(let i = 0; i < whiteArray.length; i++){
-  if(whiteArray[i].color === 'gray'){
+  if(whiteArray[i].color === 'grey'){
     $score.innerText = Number($score.innerText) + Number(points)
     console.log($score.innerHTML)
   }
@@ -101,7 +101,7 @@ if(level!=2 && level!=5 && level!=6 && level !=8){
   }
 }
 
-// this this just for level 2 and 3, so that there are random gray points that also apear.
+// this this just for level 2 and 3, so that there are random grey points that also apear.
 else{
   console.log('position2')
   for (let j = 0; j < grid[0].length; j++) {

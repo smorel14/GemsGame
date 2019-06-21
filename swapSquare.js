@@ -1,4 +1,9 @@
 let boxClicked = [];
+let grid1;
+let grid2;
+let colorX;
+let colorY;
+
 
 
 function swapSquare() {
@@ -21,7 +26,7 @@ function swapSquare() {
     buttonClicking.pause();
     buttonClicking.currentTime = 0
     buttonClicking.play();
-    let grid1 = grid[possitionX][possitionY]
+    grid1 = grid[possitionX][possitionY]
     grid1.isSelected = true;
 
     $retryButton.innerText = 'Retry'
@@ -35,18 +40,20 @@ function swapSquare() {
       grid1.isSelected = true;
     }
     else {
-      let grid2 = grid[boxClicked[0]][boxClicked[1]];
+      grid2 = grid[boxClicked[0]][boxClicked[1]];
       if (
         (Math.pow(possitionX - boxClicked[0], 2) === 1 &&
           Math.pow(possitionY - boxClicked[1], 2) === 0) ||
         (Math.pow(possitionX - boxClicked[0], 2) === 0 &&
           Math.pow(possitionY - boxClicked[1], 2) === 1)) 
       {
+
         let square1 = grid[possitionX][possitionY];
         let square2 = grid[boxClicked[0]][boxClicked[1]];
-        let color = square1.color;
+        colorX = square1.color;
+        colorY = square2.color;
         square1.color = square2.color;
-        square2.color = color;
+        square2.color = colorX;
         //ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawGrid(grid);
         grid[boxClicked[0]][boxClicked[1]].isSelected = false;
@@ -66,11 +73,12 @@ function swapSquare() {
 }
 
 
-function changeBack (grid, grid1, grid2){
+function changeBack (grid, grid1, grid2, colorX, colorY){
 setTimeout(() => {
 let color1 = ''
 let color2 = ''
 let color3 = ''
+let change = true;
 
   for(let i = 0; i < grid.length; i++){
     for(let j = 0; j <grid[0].length; j++){
@@ -79,7 +87,7 @@ let color3 = ''
           color2 = grid[i+1][j].color;
           color3 = grid[i+2][j].color;
           if(color1 === color2 && color1 === color3){
-            return;
+           return;
           }
         }
         if(j < grid[0].length - 2){
@@ -93,13 +101,13 @@ let color3 = ''
     }
   }
 
-  color1 = grid1.color;
-  grid1.color = grid2.color;
-  grid2.color = color1; 
-  // sound for switch back;
+    color1 = grid1.color;
+    grid1.color = grid2.color;
+    grid2.color = color1; 
   
-  bananaSlip.pause();
-  bananaSlip.currentTime = -1
-  bananaSlip.play();
+    // sound for switch back;
+    bananaSlip.pause();
+    bananaSlip.currentTime = -1
+    bananaSlip.play();
   },200)
 }
